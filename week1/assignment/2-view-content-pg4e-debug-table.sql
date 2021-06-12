@@ -1,0 +1,1 @@
+SELECT query, result, created_at FROM pg4e_debug;
