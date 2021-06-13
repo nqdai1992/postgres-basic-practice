@@ -1,0 +1,1 @@
+INSERT INTO users (name, email) VALUES ('Chuck', 'csev@umich.edu');
