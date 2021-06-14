@@ -77,3 +77,6 @@ SELECT count(*) FROM <table_name> [WHERE <selection_criteria>]
 ```
 
 ### Data types
+
+## Week 3
+
