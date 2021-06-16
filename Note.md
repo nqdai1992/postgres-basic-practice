@@ -80,3 +80,27 @@ SELECT count(*) FROM <table_name> [WHERE <selection_criteria>]
 
 ## Week 3
 
+- Join the tables
+
+```sql
+SELECT * | <colum_name_1>, <column_name_2>... 
+FROM <table_1> 
+    JOIN <table_2> ON <key_mapping>,
+    JOIN <table_3> ON <key_mapping>,
+    ...
+    JOIN <table_4> ON <key_mapping>;
+```
+
+- Cross join the tables
+
+```sql
+SELECT t* | <colum_name_1>, <column_name_2>... 
+FROM <table_1> CROSS JOIN <table_2>;
+```
+
+## Week 4
+
+- Can drop table with cascade
+```sql
+DROP TABLE <table_name> CASCADE;
+```
