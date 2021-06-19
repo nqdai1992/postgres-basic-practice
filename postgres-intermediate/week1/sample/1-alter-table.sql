@@ -1,0 +1,22 @@
+DROP TABLE IF EXISTS account;
+CREATE TABLE account (
+    id SERIAL,
+    email VARCHAR(128) UNIQUE,
+    created_at DATE NOT NULL DEFAULT NOW(),
+    updated_at DATE NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS post;
+CREATE TABLE post (
+    id SERIAL,
+    title VARCHAR(128) UNIQUE NOT NULL,
+    oops TEXT,
+    content VARCHAR(1024),
+    account_id INTEGER REFERENCES account(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE post DROP COLUMN oops;
